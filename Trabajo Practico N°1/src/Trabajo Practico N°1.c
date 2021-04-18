@@ -24,6 +24,8 @@ int main() {
 	  int resultadomultiplicacion;
 	  float resultadodivision;
 	  int resultadofactorial;
+	  int resultadofactorialDos;
+
 
 	  setbuf (stdout , NULL);
 	    do
@@ -35,40 +37,42 @@ int main() {
 	     printf( "5-Salir \n " );
 	     printf( "Elija una opcion : '1' '2' '3' '4' '5'\n " );
 	     fflush(stdin);
-	     scanf( "%d", & opcion );
+	     scanf("%d",&opcion);
 
 
-	        switch (opcion)
+	       switch (opcion)
 	        {
 	         case 1:
 	         printf ("ingrese operando A");
-	         scanf ("%d", &numeroUno);
+	         scanf ("%d",&numeroUno);
 	         break;
              case 2:
 	         printf ("ingrese operando B");
-	         scanf ("%d", &numeroDos);
+	         scanf ("%d",&numeroDos);
 	         break;
              case 3:
 	         resultadosuma = suma(numeroUno,numeroDos);
 	         resultadoresta = resta (numeroUno, numeroDos);
 	         resultadomultiplicacion = multiplicar (numeroUno,numeroDos);
 	         resultadodivision = dividir (numeroUno, numeroDos);
-	         resultadofactorial = factorial (numeroUno,numeroDos);
-	         printf ("Las operaciones se realizaron correctamente");
+	         resultadofactorial = factorial (numeroUno);
+	         resultadofactorialDos = factorial (numeroDos);
+	         printf("Las operaciones se realizaron correctamente");
 	         break;
              case 4:
 	         printf("El resultado de la suma es %d ", resultadosuma);
 	         printf("El resultado de la resta es %d ", resultadoresta);
 	         printf("El resultado de la multiplicacion es %d ",resultadomultiplicacion);
 	         printf("El resultado de la division es %f ", resultadodivision);
-	         printf("El resultado de el factorial es %d , %d ",resultadofactorial);
+	         printf("El resultado de el factorial es %d ",resultadofactorial);
+	         printf("El resultado de el factorial es %d ",resultadofactorialDos);
 	         break;
 	         case 5:
-	         printf ("salir");
+	         printf("salir");
 	         break;
 
 	    }
-}           while(opcion != 5);
+}           while(opcion  >1 || opcion<5);
 
 	  return 0;
 }

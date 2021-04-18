@@ -4,7 +4,7 @@
  *  Created on: 14 abr. 2021
  *      Author: floor
  */
-#include "bibliotecas.h"
+#include "biblioteca.h"
 
 
 int suma (int numeroA , int numeroB)
